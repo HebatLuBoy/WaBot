@@ -132,7 +132,7 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285892766102@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["6285704647229@s.whatsapp.net"] // replace this with your number
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -441,7 +441,7 @@ async function starts() {
 					}
 					mentions(teks, members_id, true)
 					break
-                                case 'tagall2':
+                                case 'punten':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -451,7 +451,7 @@ async function starts() {
 					}
 					reply(teks)
 					break
-                                case 'tagall3':
+                                case 'misi':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -470,7 +470,7 @@ async function starts() {
 					}
 					reply('Sukses delete all chat :)')
 					break
-				case 'bc':
+				case 'bcast':
 					if (!isOwner) return reply('Kamu siapa?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
